@@ -1,22 +1,22 @@
+// C++: Calculate total and average
+
 #include <iostream>
 using namespace std;
 
 int main() {
 
-    int* numbers = new int[5];
+    int numbers[] = {10, 20, 30, 40, 50};
+
+    int total = 0;
 
     for (int i = 0; i < 5; i++) {
-        numbers[i] = (i + 1) * 10;
+        total += numbers[i];
     }
 
-    cout << "Numbers:" << endl;
+    double average = total / 5.0;
 
-    for (int i = 0; i < 5; i++) {
-        cout << numbers[i] << endl;
-    }
-
-    delete[] numbers;
-    numbers = nullptr;
+    cout << "Total: " << total << endl;
+    cout << "Average: " << average << endl;
 
     return 0;
 }
